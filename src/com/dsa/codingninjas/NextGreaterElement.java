@@ -120,7 +120,7 @@ public class NextGreaterElement {
             // IV) Sort the digits after (i-1)
             // in ascending order
             Arrays.sort(ar, i, length);
-            return Integer.parseInt(new String(ar));
+            return Long.parseLong(new String(ar));
         }
     }
 
