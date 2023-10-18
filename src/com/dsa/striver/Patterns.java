@@ -8,7 +8,8 @@ public class Patterns {
 //        pattern9(n);
 //        pattern10(n);
 //        pattern11(n);
-        pattern12(n);
+//        pattern12(n);
+        pattern13(n);
     }
 
     /**
@@ -199,6 +200,24 @@ public class Patterns {
                 System.out.print(j);
                 System.out.print(" ");
             }
+            System.out.println();
+        }
+    }
+
+    /**
+     * 1
+     * 2 3
+     * 4 5 6
+     */
+    private static void pattern13(int n) {
+        int counter=1;
+        for (int i=1;i<=n;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print(counter);
+                counter++;
+                System.out.print(" ");
+            }
+
             System.out.println();
         }
     }
