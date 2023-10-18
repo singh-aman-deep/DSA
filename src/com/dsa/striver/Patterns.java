@@ -7,7 +7,8 @@ public class Patterns {
 //        pattern8(n);
 //        pattern9(n);
 //        pattern10(n);
-        pattern11(n);
+//        pattern11(n);
+        pattern12(n);
     }
 
     /**
@@ -172,6 +173,31 @@ public class Patterns {
                     System.out.print(j%2==0?0:1);
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+    }
+
+    /**
+     * 1    1
+     * 12  21
+     * 123321
+     */
+    private static void pattern12(int n) {
+        for (int i=1;i<=n;i++){
+
+            for (int j=1;j<=i;j++){
+                System.out.print(j);
+                System.out.print(" ");
+            }
+
+            for (int j=1;j<=(n+1)/i;j++){
+                System.out.print(" ");
+            }
+
+            for (int j=i;j>=1;j--){
+                System.out.print(j);
+                System.out.print(" ");
             }
             System.out.println();
         }
