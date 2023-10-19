@@ -10,7 +10,8 @@ public class Patterns {
 //        pattern11(n);
 //        pattern12(n);
 //        pattern13(n);
-        pattern14(n);
+//        pattern14(n);
+        pattern15(n);
     }
 
     /**
@@ -230,6 +231,28 @@ public class Patterns {
      */
     private static void pattern14(int n) {
         for(int i=0;i<n;i++){
+
+            // Inner loop will loop for i times and
+            // print alphabets from A to A + i.
+            for(char ch = 'A'; ch<='A'+i;ch++){
+                System.out.print(ch + " ");
+
+            }
+            // As soon as the letters for each iteration are printed, we move to the
+            // next row and give a line break otherwise all letters
+            // would get printed in 1 line.
+            System.out.println();
+
+        }
+    }
+
+    /**
+     * A B C
+     * A B
+     * A
+     */
+    private static void pattern15(int n) {
+        for(int i=n-1;i>=0;i--){
 
             // Inner loop will loop for i times and
             // print alphabets from A to A + i.
