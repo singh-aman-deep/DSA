@@ -11,8 +11,11 @@ public class Patterns {
 //        pattern12(n);
 //        pattern13(n);
 //        pattern14(n);
-        pattern15(n);
+//        pattern15(n);
+//        pattern16(n);
+        pattern17(n);
     }
+
 
     /**
      *   *
@@ -266,5 +269,26 @@ public class Patterns {
             System.out.println();
 
         }
+    }
+
+    /**
+     * A
+     * B B
+     * C C C
+     */
+    private static void pattern16(int n) {
+        for(int i=0;i<n;i++){
+
+            for(int j=0;j<=i;j++){
+
+                System.out.print((char)((int)('A'+i)) + " ");
+
+            }
+            System.out.println();
+
+        }
+    }
+
+    private static void pattern17(int n) {
     }
 }
