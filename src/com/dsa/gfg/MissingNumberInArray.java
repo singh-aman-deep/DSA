@@ -29,13 +29,13 @@ public class MissingNumberInArray {
     static int missingNumber0(int array[], int n) {
         int missingNumber = -1;
         Arrays.sort(array);
-        for (int i = 0; i < array.length-1; i++) {
-            int difference=array[i+1]-array[i];
-            if (difference!=1){
-                missingNumber=array[i]+1;
-            }else {
-                if (array.length!=n){
-                    missingNumber=n;
+        for (int i = 0; i < array.length - 1; i++) {
+            int difference = array[i + 1] - array[i];
+            if (difference != 1) {
+                missingNumber = array[i] + 1;
+            } else {
+                if (array.length != n) {
+                    missingNumber = n;
                 }
             }
 

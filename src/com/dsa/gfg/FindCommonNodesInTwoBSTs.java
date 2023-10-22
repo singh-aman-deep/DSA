@@ -36,30 +36,30 @@ class Solution1 {
     //Function to find the nodes that are common in both BST.
     public static ArrayList<Integer> findCommon(Node root1, Node root2) {
         output = new ArrayList<>();
-        hashSet=new HashSet<>();
+        hashSet = new HashSet<>();
         first(root1);
         second(root2);
         return output;
     }
 
     private static void first(Node root1) {
-        if (root1!=null){
+        if (root1 != null) {
             first(root1.left);
             hashSet.add(root1.data);
             first(root1.right);
         }
 
     }
+
     private static void second(Node root2) {
-        if (root2!=null){
+        if (root2 != null) {
             second(root2.left);
-            if (hashSet.contains(root2.data)){
+            if (hashSet.contains(root2.data)) {
                 output.add(root2.data);
             }
             second(root2.right);
         }
     }
-
 
 
 }

@@ -26,7 +26,7 @@ public class MinCostClimbingStairs {
 
     public static void main(String[] args) {
 //        int[] arr = new int[]{10, 15, 20};
-        int[] arr = new int[]{1,100,1,1,1,100,1,1,100,1};
+        int[] arr = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
         System.out.println(minCostClimbingStairs(arr));
     }
 

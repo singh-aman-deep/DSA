@@ -21,11 +21,11 @@ public class RemoveTrailingZerosFromaString {
     }
 
     public static String removeTrailingZeros(String num) {
-        int length=num.length()-1;
+        int length = num.length() - 1;
         for (int i = length; i >= 0; i--) {
-            if (num.charAt(i)=='0'){
-                num=num.substring(0,i);
-            }else {
+            if (num.charAt(i) == '0') {
+                num = num.substring(0, i);
+            } else {
                 break;
             }
 
@@ -34,10 +34,10 @@ public class RemoveTrailingZerosFromaString {
     }
 
     public static String removeTrailingZeros1(String num) {
-        int i = num.length()-1;
-        while(num.charAt(i)=='0'){
+        int i = num.length() - 1;
+        while (num.charAt(i) == '0') {
             i--;
         }
-        return num.substring(0,i+1);
+        return num.substring(0, i + 1);
     }
 }

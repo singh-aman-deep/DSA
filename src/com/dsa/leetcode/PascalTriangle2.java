@@ -26,11 +26,12 @@ public class PascalTriangle2 {
     public static List<Integer> getRow(int rowIndex) {
         int[] prev = new int[rowIndex + 1];
         int[] res = new int[rowIndex + 1];
-        prev[0] = 1; res[0] = 1;
-        for(int i = 1, m; i <= rowIndex ; i++){
+        prev[0] = 1;
+        res[0] = 1;
+        for (int i = 1, m; i <= rowIndex; i++) {
             m = i / 2 + 1;
             res[i] = 1;
-            for(int j = 1; j < m; j++){
+            for (int j = 1; j < m; j++) {
                 res[j] = prev[j] + prev[j - 1];
                 res[i - j] = res[j];
             }
@@ -39,7 +40,7 @@ public class PascalTriangle2 {
             prev = temp;
         }
         List<Integer> Res = new ArrayList<Integer>();
-        for(int r : prev) Res.add(r);
+        for (int r : prev) Res.add(r);
         return Res;
     }
 

@@ -5,7 +5,7 @@ package com.dsa.codingninjas;
  * <p>
  * Count Digits
  * You are given a number N
- *
+ * <p>
  * Find the number of digits of ‘n’ that evenly divide ‘n’.
  */
 public class CountDigitsCN {

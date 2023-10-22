@@ -23,14 +23,14 @@ public class PrintAlternateElementsOfAnArray {
         int n = 4;
 //        int[] arr = new int[]{1, 2, 3, 4, 5};
 //        int n = 5;
-        print(arr,n);
+        print(arr, n);
 
     }
 
     public static void print(int arr[], int n) {
-        for (int i=0;i<n;i++){
-            if (i%2==0){
-                System.out.print(arr[i]+" ");
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                System.out.print(arr[i] + " ");
             }
         }
     }

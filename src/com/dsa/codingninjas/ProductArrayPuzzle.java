@@ -16,11 +16,11 @@ public class ProductArrayPuzzle {
 
     public static int[] productPuzzle(int[] arr, int n) {
         int[] outputArr = new int[n];
-        Arrays.fill(outputArr,1);
+        Arrays.fill(outputArr, 1);
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (j!=i){
+                if (j != i) {
                     outputArr[i] = outputArr[i] * arr[j];
                 }
             }

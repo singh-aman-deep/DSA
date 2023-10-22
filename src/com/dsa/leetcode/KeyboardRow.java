@@ -35,8 +35,8 @@ public class KeyboardRow {
         String two = "asdfghjklASDFGHJKL";
         String three = "zxcvbnmZXCVBNM";
         List<String> list = new LinkedList<>();
-        for(int i=0;i<words.length;i++){
-            if(check(words[i],one) || check(words[i],two) || check(words[i],three)){
+        for (int i = 0; i < words.length; i++) {
+            if (check(words[i], one) || check(words[i], two) || check(words[i], three)) {
                 list.add(words[i]);
             }
         }
@@ -50,17 +50,17 @@ public class KeyboardRow {
         return arr;
     }
 
-    public static boolean check(String s, String checker){
+    public static boolean check(String s, String checker) {
         boolean temp = true;
-        for(char c : s.toCharArray()){
+        for (char c : s.toCharArray()) {
             boolean isTrue = false;
-            for(char ch : checker.toCharArray()){
-                if(c == ch){
+            for (char ch : checker.toCharArray()) {
+                if (c == ch) {
                     isTrue = true;
                     break;
                 }
             }
-            if(!isTrue){
+            if (!isTrue) {
                 return false;
             }
         }

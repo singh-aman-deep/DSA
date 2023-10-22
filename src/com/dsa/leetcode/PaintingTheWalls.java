@@ -2,12 +2,12 @@ package com.dsa.leetcode;
 
 /**
  * 14 Oct 2023
- *
+ * <p>
  * 2742. Painting the Walls
- *
+ * <p>
  * You are given two 0-indexed integer arrays, cost and time, of size n representing the costs and the
  * time taken to paint n different walls respectively. There are two painters available:
- *
+ * <p>
  * A paid painter that paints the ith wall in time[i] units of time and takes cost[i] units of money.
  * A free painter that paints any wall in 1 unit of time at a cost of 0.
  * But the free painter can only be used if the paid painter is already occupied.
@@ -16,14 +16,14 @@ package com.dsa.leetcode;
 public class PaintingTheWalls {
 
     public static void main(String[] args) {
-       int [] cost = new int[]{1,2,3,2};
-       int [] time = new int[]{1,2,3,2};
-        System.out.println(new Solution().paintWalls(cost,time));
+        int[] cost = new int[]{1, 2, 3, 2};
+        int[] time = new int[]{1, 2, 3, 2};
+        System.out.println(new Solution().paintWalls(cost, time));
     }
 
 }
 
- class Solution {
+class Solution {
     int[][] memo;
     int n;
 

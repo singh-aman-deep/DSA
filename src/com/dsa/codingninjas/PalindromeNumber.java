@@ -24,7 +24,7 @@ public class PalindromeNumber {
 
     public static boolean palindromeNumber(int n) {
         int reverseNumber = 0;
-        int originalNUmber=n;
+        int originalNUmber = n;
         while (n > 0) {
             //Extract the last digit
             int digit = n % 10;
@@ -33,6 +33,6 @@ public class PalindromeNumber {
             // Shrinking n by discarding the last digit
             n = n / 10;
         }
-        return reverseNumber==originalNUmber;
+        return reverseNumber == originalNUmber;
     }
 }

@@ -30,16 +30,15 @@ public class FloorInBST {
     public static int floor(Node root, int x) {
         int output = -1;
 
-        while (root!=null){
-            if (root.data==x){
+        while (root != null) {
+            if (root.data == x) {
                 return root.data;
             }
-            if (root.data>x){
-                root=root.left;
-            }
-            else
-            {  output=root.data;
-                root=root.right;
+            if (root.data > x) {
+                root = root.left;
+            } else {
+                output = root.data;
+                root = root.right;
             }
 
         }

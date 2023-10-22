@@ -3,24 +3,23 @@ package com.dsa.gfg;
 import java.util.ArrayList;
 
 /**
- *15 Oct 2023
- *
+ * 15 Oct 2023
+ * <p>
  * Normal BST to Balanced BST
- *
+ * <p>
  * Given a Binary Search Tree, modify the given BST such that it is balanced and has minimum possible height.
  * Return the balanced BST.
- *
+ * <p>
  * Input:
- *        30
- *       /
- *      20
- *     /
- *    10
+ * 30
+ * /
+ * 20
+ * /
+ * 10
  * Output:
- *      20
- *    /   \
- *  10     30
- *
+ * 20
+ * /   \
+ * 10     30
  */
 public class NormalBSTToBalancedBST {
 
@@ -34,34 +33,33 @@ public class NormalBSTToBalancedBST {
 
 }
 
-class GfG
-{
+class GfG {
     ArrayList<Node> al;
-    Node buildBalancedTree(Node root)
-    {
+
+    Node buildBalancedTree(Node root) {
         //Add your code here.
         al = new ArrayList<>();
         in(root);
-        return toBalance(0, al.size()-1);
+        return toBalance(0, al.size() - 1);
 
 
     }
-    Node toBalance( int l, int r)// binary search
-    {
-        if(l>r) return null;
 
-        int m =(l+r)/2;
+    Node toBalance(int l, int r)// binary search
+    {
+        if (l > r) return null;
+
+        int m = (l + r) / 2;
         Node root = al.get(m);
 
-        root.right = toBalance(m+1, r);
-        root.left = toBalance(l,m-1);
+        root.right = toBalance(m + 1, r);
+        root.left = toBalance(l, m - 1);
 
         return root;
     }
-    void in(Node root)
-    {
-        if(root!=null)
-        {
+
+    void in(Node root) {
+        if (root != null) {
             in(root.left);
             al.add(root);
             in(root.right);

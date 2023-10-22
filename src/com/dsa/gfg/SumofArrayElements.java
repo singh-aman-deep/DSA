@@ -12,14 +12,14 @@ public class SumofArrayElements {
     public static void main(String[] args) {
         int n = 3;
         int arr[] = new int[]{3, 2, 1};
-        System.out.println(sumElement(arr,n));
+        System.out.println(sumElement(arr, n));
 
     }
 
     public static int sumElement(int arr[], int n) {
-        int output=0;
+        int output = 0;
         for (int i = 0; i < n; i++) {
-            output=output+arr[i];
+            output = output + arr[i];
         }
         return output;
     }

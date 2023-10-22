@@ -9,13 +9,12 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- *
  * 12 Oct 2023
- *
+ * <p>
  * Duplicate subtree in Binary Tree
- *
+ * <p>
  * Given a binary tree, find out whether it contains a duplicate sub-tree of size two or more, or not.
- *
+ * <p>
  * Note: Two same leaf nodes are not considered as subtree as size of a leaf node is one.
  */
 public class DuplicateSubtreeInBinaryTree {
@@ -29,8 +28,8 @@ public class DuplicateSubtreeInBinaryTree {
         root.left.right = new Node('E');
         root.right.right = new Node('F');
         root.right.right.right = new Node('J');
-        root.right.right.left= new Node('D');
-        root.right.right.left.left= new Node('G');
+        root.right.right.left = new Node('D');
+        root.right.right.left.left = new Node('G');
 
         System.out.print(dupSub(root));
 
