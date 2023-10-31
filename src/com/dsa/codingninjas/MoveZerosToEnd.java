@@ -45,6 +45,9 @@ public class MoveZerosToEnd {
                 break;
             }
         }
+        if (j==-1){
+            return a;
+        }
 
         for (int i=j+1;i<n;i++){
             if (a[i]!=0){
