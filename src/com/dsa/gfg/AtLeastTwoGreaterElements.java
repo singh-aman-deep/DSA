@@ -31,8 +31,8 @@ public class AtLeastTwoGreaterElements {
 
     public static long[] findElements(long a[], long n) {
         ArrayList<Long> output = new ArrayList<>();
-        long firstLargest=Long.MIN_VALUE;
-        long secondLargest=Long.MIN_VALUE;
+        long firstLargest = Long.MIN_VALUE;
+        long secondLargest = Long.MIN_VALUE;
 
         for (long l : a) {
             if (l > firstLargest) {
@@ -60,8 +60,8 @@ public class AtLeastTwoGreaterElements {
     public static long[] findElements1(long a[], long n) {
         int length = a.length;
         Arrays.sort(a);
-        long[] output = new long[length-2];
-        for(int i=0; i< n-2 ;i++){
+        long[] output = new long[length - 2];
+        for (int i = 0; i < n - 2; i++) {
             output[i] = a[i];
         }
         return output;

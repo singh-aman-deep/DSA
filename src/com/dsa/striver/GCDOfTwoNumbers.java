@@ -9,9 +9,9 @@ public class GCDOfTwoNumbers {
     }
 
     public static int calcGCD(int n, int m) {
-        if (m==0){
+        if (m == 0) {
             return n;
         }
-        return calcGCD(m,n%m);
+        return calcGCD(m, n % m);
     }
 }

@@ -27,18 +27,18 @@ public class FindTheSingleElement {
         for (int j : arr) {
             map.put(j, map.getOrDefault(j, 0) + 1);
         }
-        for (Map.Entry<Integer,Integer> item: map.entrySet()) {
-            int key=item.getKey();
-            int count=item.getValue();
-            if (count==1){
-              return key;
+        for (Map.Entry<Integer, Integer> item : map.entrySet()) {
+            int key = item.getKey();
+            int count = item.getValue();
+            if (count == 1) {
+                return key;
             }
         }
         return 0;
     }
 
     public static int getSingleElementO(int[] arr) {
-        int xor=0;
+        int xor = 0;
         for (int j : arr) {
             xor = xor ^ j;
         }
@@ -50,16 +50,16 @@ public class FindTheSingleElement {
         // Using Linear Search
         int output = 0;
         for (int i = 0; i < arr.length; i++) {
-           output=arr[i];
-           int counter=0;
+            output = arr[i];
+            int counter = 0;
             for (int j = 0; j < arr.length; j++) {
 
-                if (output==arr[j]){
+                if (output == arr[j]) {
                     counter++;
                 }
 
             }
-            if (counter==1){
+            if (counter == 1) {
                 return output;
             }
 

@@ -27,13 +27,6 @@ public class FindInMountainArray {
         System.out.println("Hello world!");
     }
 
-    interface MountainArray {
-        int get(int index);
-
-        int length();
-    }
-
-
     public int findInMountainArray(int target, MountainArray mountainArr) {
         // Save the length of the mountain array
         int length = mountainArr.length();
@@ -89,5 +82,12 @@ public class FindInMountainArray {
 
         // Target is not present in the mountain array
         return -1;
+    }
+
+
+    interface MountainArray {
+        int get(int index);
+
+        int length();
     }
 }

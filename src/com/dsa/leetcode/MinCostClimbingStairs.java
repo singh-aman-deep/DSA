@@ -1,7 +1,5 @@
 package com.dsa.leetcode;
 
-import java.util.Arrays;
-
 /**
  * 13 Oct 2023
  * <p>

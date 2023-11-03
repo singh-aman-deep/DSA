@@ -19,19 +19,20 @@ package com.dsa.codingninjas;
 public class CheckSortedArray {
 
     public static void main(String[] args) {
-        int n =5;
-        int [] arr=new int[]{5,0,0,0,1};
-        System.out.println(isSorted(n,arr));
+        int n = 5;
+        int[] arr = new int[]{5, 0, 0, 0, 1};
+        System.out.println(isSorted(n, arr));
     }
-    public static int isSorted(int n, int []a) {
-       int flag=1;
-       for (int i=0;i<n-1;i++){
-           if (a[i] >= a[i + 1] && a[i] != a[i + 1]) {
-               flag=0;
-               break;
-           }
-       }
 
-       return flag;
+    public static int isSorted(int n, int[] a) {
+        int flag = 1;
+        for (int i = 0; i < n - 1; i++) {
+            if (a[i] >= a[i + 1] && a[i] != a[i + 1]) {
+                flag = 0;
+                break;
+            }
+        }
+
+        return flag;
     }
 }

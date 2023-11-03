@@ -43,15 +43,14 @@ public class PerfectArrays {
         return Arrays.equals(a, reverseArr);
     }
 
-    class Solution{
+    class Solution {
 
         // Function to check if array is perfect or not
-        public boolean IsPerfect(int a[], int n)
-        {
+        public boolean IsPerfect(int a[], int n) {
             // Checking elements from both ends of the array
-            for(int i=0;i<n/2;i++){
+            for (int i = 0; i < n / 2; i++) {
                 // If any two elements are not equal, array is not perfect
-                if(a[n-i-1] != a[i])
+                if (a[n - i - 1] != a[i])
                     return false;
             }
             // If all elements checked and they are equal, array is perfect

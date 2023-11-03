@@ -4,49 +4,48 @@ import java.util.Arrays;
 
 /**
  * 31 Oct 2023
- *
+ * <p>
  * 283. Move Zeroes
- *
+ * <p>
  * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * Note that you must do this in-place without making a copy of the array.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: nums = [0,1,0,3,12]
  * Output: [1,3,12,0,0]
- *
  */
 public class MoveZeroes {
     public static void main(String[] args) {
-        int [] arr={1,2,0,0,2,3};
-        int n= arr.length;
+        int[] arr = {1, 2, 0, 0, 2, 3};
+        int n = arr.length;
         moveZeroes(arr);
         System.out.println(Arrays.toString(arr));
     }
 
 
     public static void moveZeroes(int[] nums) {
-        int j=-1;
-        int n= nums.length;
+        int j = -1;
+        int n = nums.length;
         if (n == 1) {
             return;
         }
-        for (int i=0;i<n;i++){
-            if (nums[i]==0){
-                j=i;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == 0) {
+                j = i;
                 break;
             }
         }
 
-        if (j==-1){
-            return ;
+        if (j == -1) {
+            return;
         }
 
-        for (int i=j+1;i<n;i++){
-            if (nums[i]!=0){
-                int temp=nums[i];
-                nums[i]=nums[j];
-                nums[j]=temp;
+        for (int i = j + 1; i < n; i++) {
+            if (nums[i] != 0) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
                 j++;
             }
         }

@@ -22,15 +22,15 @@ import java.util.Arrays;
  * Stay, Stay, Stay
  */
 public class NumberofWaystoStayInTheSamePlaceAfterSomeSteps {
+    static int[][] memo;
+    static int MOD = (int) 1e9 + 7;
+    static int arrLen;
+
     public static void main(String[] args) {
         int steps = 3;
         int arrLen = 2;
         System.out.println(numWays(steps, arrLen));
     }
-
-    static int[][] memo;
-    static int MOD = (int) 1e9 + 7;
-    static int arrLen;
 
     public static int dp(int curr, int remain) {
         if (remain == 0) {

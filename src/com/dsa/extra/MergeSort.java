@@ -31,7 +31,7 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] arr = new int[]{13, 46, 24, 52, 20, 9};
         int n = arr.length;
-        mergeSort(arr, 0, n-1);
+        mergeSort(arr, 0, n - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -42,10 +42,10 @@ public class MergeSort {
 
     public static void mS(int[] arr, int low, int high) {
         if (low >= high) return;
-        int mid=(low+high)/2;
-        mS(arr,low,mid);
-        mS(arr,mid+1,high);
-        merge(arr,low,mid,high);
+        int mid = (low + high) / 2;
+        mS(arr, low, mid);
+        mS(arr, mid + 1, high);
+        merge(arr, low, mid, high);
     }
 
     private static void merge(int[] arr, int low, int mid, int high) {
@@ -53,7 +53,7 @@ public class MergeSort {
         int left = low;      // starting index of left half of arr
         int right = mid + 1;
 
-        while (left<=mid&&right<=high){
+        while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp.add(arr[left]);
                 left++;

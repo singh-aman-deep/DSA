@@ -1,11 +1,7 @@
 package com.dsa.gfg;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Set;
 
 /**
@@ -19,6 +15,9 @@ import java.util.Set;
  */
 public class DuplicateSubtreeInBinaryTree {
 
+
+    static char MARKER = '$';
+    private static Set<String> subtree = new HashSet<>();
 
     public static void main(String[] args) throws IOException {
         Node root = new Node('A');
@@ -35,7 +34,6 @@ public class DuplicateSubtreeInBinaryTree {
 
     }
 
-
     public static int dupSub(Node root) {
         String str = dup(root);
 
@@ -44,9 +42,6 @@ public class DuplicateSubtreeInBinaryTree {
         else
             return 0;
     }
-
-    static char MARKER = '$';
-    private static Set<String> subtree = new HashSet<>();
 
     private static String dup(Node root) {
         String s = "";

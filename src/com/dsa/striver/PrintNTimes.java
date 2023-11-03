@@ -17,10 +17,10 @@ public class PrintNTimes {
     }
 
     public static void printNtimes(int n) {
-        if (n==0){
+        if (n == 0) {
             return;
         }
         System.out.print("Coding Ninjas ");
-        printNtimes(n-1);
+        printNtimes(n - 1);
     }
 }

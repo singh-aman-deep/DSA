@@ -1,17 +1,17 @@
 package com.dsa.striver;
 
-import java.util.*;
+import java.util.Scanner;
 
 
 /**
  * 22 Oct 2023
  * Coding Ninjas
- *
+ * <p>
  * Check Armstrong
- *
+ * <p>
  * Check if a number is Armstrong Number or not
  * Problem Statement: Given a number, check if it is Armstrong Number or Not.
- *
+ * <p>
  * Example 1:
  * Input:153
  * Output: Yes, it is an Armstrong Number

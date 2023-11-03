@@ -3,39 +3,39 @@ package com.dsa.striver;
 /**
  * 23 Oct 2023
  * Coding Ninjas
- *
+ * <p>
  * Sum Of First N Numbers
- *
+ * <p>
  * Problem statement: Given a number ‘N’, find out the sum of the first N natural numbers.
- *
+ * <p>
  * Examples:
- *
+ * <p>
  * Example 1:
  * Input: N=5
  * Output: 15
  * Explanation: 1+2+3+4+5=15
- *
  */
 public class SumOfFirstNNumbers {
 
     public static void main(String[] args) {
-        int n=1000000;
+        int n = 1000000;
         System.out.println(sumFirstN2(n));
     }
+
     public static long sumFirstN(long n) {
-       return sum(0,n);
+        return sum(0, n);
     }
 
     private static long sum(long i, long n) {
-        if (n<1){
+        if (n < 1) {
             return i;
         }
-        i=i+n;
-        return sum(i,n-1);
+        i = i + n;
+        return sum(i, n - 1);
     }
 
-     static long sumFirstN2(long n) {
+    static long sumFirstN2(long n) {
         // Write your code here.
-        return n*(n+1)/2;
+        return n * (n + 1) / 2;
     }
 }

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 /**
  * 30 Oct 2023
- *
+ * <p>
  * Rotate array
- *
+ * <p>
  * Problem Statement: Given an array of integers, rotating array of elements by k elements to left
- *
+ * <p>
  * Example:
- *
+ * <p>
  * 'arr '= [1,2,3,4,5]
  * 'k' = 1  rotated array = [2,3,4,5,1]
  * 'k' = 2  rotated array = [3,4,5,1,2]
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class RotateArrayLeftByK {
 
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList=new ArrayList<>(){{
+        ArrayList<Integer> arrayList = new ArrayList<>() {{
             add(1);
             add(2);
             add(3);
@@ -27,8 +27,8 @@ public class RotateArrayLeftByK {
             add(5);
         }};
 
-        int k=3;
-        System.out.println(rotateArray(arrayList,k));
+        int k = 3;
+        System.out.println(rotateArray(arrayList, k));
 
     }
 
@@ -37,7 +37,7 @@ public class RotateArrayLeftByK {
         // Reverse first k elements
         reverse(arr, 0, k - 1);
         // Reverse last n-k elements
-        reverse(arr, k , arr.size() - 1);
+        reverse(arr, k, arr.size() - 1);
         // Reverse whole array
         reverse(arr, 0, arr.size() - 1);
         return arr;
@@ -47,7 +47,7 @@ public class RotateArrayLeftByK {
         while (start <= end) {
             int temp = arr.get(start);
             arr.set(start, arr.get(end));
-            arr.set(end,temp);
+            arr.set(end, temp);
             start++;
             end--;
         }

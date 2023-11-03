@@ -18,18 +18,18 @@ import java.util.Arrays;
  */
 public class MoveZerosToEnd {
     public static void main(String[] args) {
-        int [] arr={1,2,0,0,2,3};
-        int n= arr.length;
-        System.out.println(Arrays.toString(moveZerosOptimal(n,arr)));
+        int[] arr = {1, 2, 0, 0, 2, 3};
+        int n = arr.length;
+        System.out.println(Arrays.toString(moveZerosOptimal(n, arr)));
     }
 
 
     public static int[] moveZeros(int n, int[] a) {
-        int [] tempArr=new int[n];
-        int j=0;
-        for (int i=0;i<n;i++){
-            if (a[i]!=0){
-                tempArr[j]=a[i];
+        int[] tempArr = new int[n];
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] != 0) {
+                tempArr[j] = a[i];
                 j++;
             }
         }
@@ -38,22 +38,22 @@ public class MoveZerosToEnd {
     }
 
     public static int[] moveZerosOptimal(int n, int[] a) {
-        int j=-1;
-        for (int i=0;i<n;i++){
-            if (a[i]==0){
-                j=i;
+        int j = -1;
+        for (int i = 0; i < n; i++) {
+            if (a[i] == 0) {
+                j = i;
                 break;
             }
         }
-        if (j==-1){
+        if (j == -1) {
             return a;
         }
 
-        for (int i=j+1;i<n;i++){
-            if (a[i]!=0){
-                int temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
+        for (int i = j + 1; i < n; i++) {
+            if (a[i] != 0) {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
                 j++;
             }
         }

@@ -30,6 +30,6 @@ public class ValidAnagram {
         char[] two = t.toCharArray();
         Arrays.sort(one);
         Arrays.sort(two);
-        return Arrays.equals(one,two);
+        return Arrays.equals(one, two);
     }
 }

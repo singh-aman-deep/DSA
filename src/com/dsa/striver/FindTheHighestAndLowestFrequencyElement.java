@@ -47,8 +47,8 @@ public class FindTheHighestAndLowestFrequencyElement {
                 minFreq = count;
             }
         }
-        output[0]=maxEle;
-        output[1]=minEle;
+        output[0] = maxEle;
+        output[1] = minEle;
 
         return output;
     }

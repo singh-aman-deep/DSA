@@ -1,7 +1,6 @@
 package com.dsa.codingninjas;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 2 Nov 2023
@@ -27,21 +26,21 @@ public class MaximumFrequencyNumber {
     public static void main(String[] args) {
         int n = 13;
         int[] arr = {2, 12, 2, 11, -12, 2, -1, 2, 2, 11, 12, 2, -6};
-        System.out.println(maxFrequencyNumberO(n,arr));
+        System.out.println(maxFrequencyNumberO(n, arr));
     }
 
     public static int maxFrequencyNumber(int n, int[] arr) {
-        int outputElement=0;
-        int maxCount=0;
-        int counter=0;
+        int outputElement = 0;
+        int maxCount = 0;
+        int counter = 0;
         for (int i = 0; i < arr.length; i++) {
-            counter=0;
+            counter = 0;
             for (int j = 0; j < arr.length; j++) {
-                if (arr[i]==arr[j]){
+                if (arr[i] == arr[j]) {
                     counter++;
                     if (maxCount < counter) {
                         maxCount++;
-                        outputElement=arr[i];
+                        outputElement = arr[i];
                     }
                 }
 

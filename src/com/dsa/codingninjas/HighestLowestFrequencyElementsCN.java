@@ -38,21 +38,21 @@ public class HighestLowestFrequencyElementsCN {
         int maxEle = 0, minEle = 0;
 
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            int count=entry.getValue();
-            int element=entry.getKey();
+            int count = entry.getValue();
+            int element = entry.getKey();
 
-            if (count>maxFreq|| count==maxFreq && element<maxEle){
-                maxFreq=count;
-                maxEle=element;
+            if (count > maxFreq || count == maxFreq && element < maxEle) {
+                maxFreq = count;
+                maxEle = element;
             }
 
-            if (count<minFreq|| count==minFreq && element<minEle){
-                minFreq=count;
-                minEle=element;
+            if (count < minFreq || count == minFreq && element < minEle) {
+                minFreq = count;
+                minEle = element;
             }
         }
-        output[0]=maxEle;
-        output[1]=minEle;
+        output[0] = maxEle;
+        output[1] = minEle;
 
         return output;
     }

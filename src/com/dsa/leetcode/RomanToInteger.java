@@ -67,10 +67,10 @@ public class RomanToInteger {
         map.put('D', 500);
         map.put('M', 1000);
 
-        for (int i = 0; i <s.length(); i++) {
-            if (i < s.length() - 1&&map.get(s.charAt(i))<map.get(s.charAt(i+1))){
+        for (int i = 0; i < s.length(); i++) {
+            if (i < s.length() - 1 && map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
                 ans = ans - map.get(s.charAt(i));
-            }else {
+            } else {
                 ans = ans + map.get(s.charAt(i));
             }
 

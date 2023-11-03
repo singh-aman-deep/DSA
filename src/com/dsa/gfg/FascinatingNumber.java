@@ -2,16 +2,16 @@ package com.dsa.gfg;
 
 /**
  * 1 Nov 2023
- *
+ * <p>
  * Fascinating Number
- *
+ * <p>
  * Given a number N. Your task is to check whether it is fascinating or not.
  * Fascinating Number: When a number(should contain 3 digits or more) is multiplied by 2 and 3,
  * and when both these products are concatenated with the original number, then it results in all digits
  * from 1 to 9 present exactly once.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input:
  * N = 192
  * Output: Fascinating
@@ -23,11 +23,10 @@ package com.dsa.gfg;
 public class FascinatingNumber {
 
     public static void main(String[] args) {
-            System.out.print(isFascinating(192));
+        System.out.print(isFascinating(192));
     }
 
-    public static boolean isFascinating(int num)
-    {
+    public static boolean isFascinating(int num) {
 
         // frequency count array
         //using 1 indexing
@@ -39,15 +38,14 @@ public class FascinatingNumber {
                 num * 3;
 
         // Traversing the string character //by character
-        for (int i = 0; i < val.length(); i++)
-        {
+        for (int i = 0; i < val.length(); i++) {
 
             // gives integer value of //a character digit
             int digit = val.charAt(i) - '0';
 
             // To check if any digit has
             // appeared multiple times
-            if (freq[digit]>0 && digit != 0)
+            if (freq[digit] > 0 && digit != 0)
                 return false;
             else
                 freq[digit]++;
@@ -55,8 +53,7 @@ public class FascinatingNumber {
 
         // Traversing through freq array to
         // check if any digit was missing
-        for (int i = 1; i < freq.length; i++)
-        {
+        for (int i = 1; i < freq.length; i++) {
             if (freq[i] == 0)
                 return false;
         }

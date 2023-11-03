@@ -45,7 +45,7 @@ public class CountFrequencyInARange {
         /*for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         }*/
-        for (int i = 1; i <=n; i++) {
+        for (int i = 1; i <= n; i++) {
             output[i - 1] = count.getOrDefault(i, 0);
         }
 
@@ -58,14 +58,12 @@ public class CountFrequencyInARange {
 */
 
     public class Solution {
-        public  int[] countFrequency(int n, int x, int []nums){
+        public int[] countFrequency(int n, int x, int[] nums) {
             // Iterate through the array and modify the elements to track the frequency.
             int i = 0;
-            while (i < n)
-            {
+            while (i < n) {
                 // Skip the element if it is not within our range.
-                if (nums[i] > n || nums[i] < 1)
-                {
+                if (nums[i] > n || nums[i] < 1) {
                     i++;
                     continue;
                 }
@@ -74,23 +72,19 @@ public class CountFrequencyInARange {
                 int j = nums[i] - 1;
 
                 // Update the frequencies.
-                if (nums[j] < 0)
-                {
+                if (nums[j] < 0) {
                     nums[i] = 0;
                     nums[j]--;
                     i++;
                     continue;
-                }
-                else
-                {
+                } else {
                     swap(nums, j, i);
                     nums[j] = -1;
                 }
             }
 
             // Adjust the negative values to positive frequencies.
-            for (int k = 0; k < nums.length; k++)
-            {
+            for (int k = 0; k < nums.length; k++) {
                 if (nums[k] < 0)
                     nums[k] *= -1;
                 else
@@ -100,8 +94,9 @@ public class CountFrequencyInARange {
             // Return the array with frequencies.
             return nums;
         }
-        public  void swap(int []a, int i, int j) {
-            int temp =a[i];
+
+        public void swap(int[] a, int i, int j) {
+            int temp = a[i];
             a[i] = a[j];
             a[j] = temp;
         }
