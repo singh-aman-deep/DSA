@@ -21,15 +21,15 @@ public class DisplayLongestName {
     public static void main(String[] args) {
         int n = 6;
         String names[] = {"Geek", "Geeks", "Geeksfor", "GeeksforGeek", "GeeksforGeeks"};
-        System.out.println(longest(names,n));
+        System.out.println(longest(names, n));
     }
 
     static String longest(String names[], int n) {
         String output;
-        output=names[0];
-        for (int i=0;i<n;i++){
-            if (names[i].length()>output.length()){
-                output=names[i];
+        output = names[0];
+        for (int i = 0; i < n; i++) {
+            if (names[i].length() > output.length()) {
+                output = names[i];
             }
         }
         return output;

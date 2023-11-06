@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 /**
  * 04 Nov 2023
- *
+ * <p>
  * Swap kth elements
- *
+ * <p>
  * Given an array Arr of size N, swap the Kth element from beginning with Kth element from end.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input:
  * N = 8, K = 3
  * Arr[] = {1, 2, 3, 4, 5, 6, 7, 8}
@@ -20,9 +20,10 @@ import java.util.Arrays;
  */
 public class SwapKthElements {
     public static void main(String[] args) {
-        int n = 8; int k = 3;
+        int n = 8;
+        int k = 3;
         int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
-        swapKth(arr,n,k);
+        swapKth(arr, n, k);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -30,5 +31,6 @@ public class SwapKthElements {
 // Swapping the kth element from the beginning and kth element from the end
         int tmp = arr[k - 1];
         arr[k - 1] = arr[n - k];
-        arr[n - k] = tmp;    }
+        arr[n - k] = tmp;
+    }
 }

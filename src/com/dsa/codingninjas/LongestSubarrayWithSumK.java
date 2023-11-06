@@ -2,11 +2,11 @@ package com.dsa.codingninjas;
 
 /**
  * 4 Nov 2023
- *
+ * <p>
  * Longest Subarray With Sum K
- *
+ * <p>
  * Problem Statement: Given an array and a sum k, we need to print the length of the longest subarray that sums to k.
- *
+ * <p>
  * Example 1:
  * Input Format: N = 3, k = 5, array[] = {2,3,5}
  * Result: 2
@@ -14,12 +14,12 @@ package com.dsa.codingninjas;
  */
 public class LongestSubarrayWithSumK {
     public static void main(String[] args) {
-        int k =3;
-        int array[] = {1,2,3,1,1,1,1};
-        System.out.println(longestSubarrayWithSumK(array,k));
+        int k = 3;
+        int array[] = {1, 2, 3, 1, 1, 1, 1};
+        System.out.println(longestSubarrayWithSumK(array, k));
     }
 
-    public static int longestSubarrayWithSumK(int []a, long k) {
+    public static int longestSubarrayWithSumK(int[] a, long k) {
         int n = a.length; // size of the array.
 
         int left = 0, right = 0; // 2 pointers
