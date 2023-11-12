@@ -21,19 +21,13 @@ public class RemoveCharactersFromAlphanumericString {
     }
 
     static String removeCharacters(String S) {
-        int j = 0;
+        StringBuilder sb = new StringBuilder();
 
-        // Iterating over each character in the string.
-        for (int i = 0; i < S.length(); i++) {
-            // Checking if the current character is a digit.
-            if ('0' <= S.charAt(i) && S.charAt(i) <= '9') {
-                // Storing the digit at the current index j.
-                S = S.substring(0, j) + S.charAt(i) + S.substring(j + 1);
-                j++;
+        for(int i = 0;i<S.length();i++){
+            if((int)S.charAt(i)>47 && (int)S.charAt(i) < 58 ){
+                sb.append(S.charAt(i));
             }
         }
-
-        // Returning the substring of the modified string without non-numeric characters.
-        return S.substring(0, j);
+        return sb.toString();
     }
 }
