@@ -93,7 +93,7 @@ public class AlternateNumbers {
 
     /**
      * Time Complexity: O(N) { O(N) for traversing the array once and substituting positives and negatives simultaneously using pointers, where N = size of the array A}.
-     *
+     * <p>
      * Space Complexity:  O(N) { Extra Space used to store the rearranged elements separately in an array, where N = size of array A}.
      */
     public static int[] alternateNumbersO(int[] a) {
@@ -102,13 +102,13 @@ public class AlternateNumbers {
         int posIndex = 0, negIndex = 1;
         for (int i = 0; i < n; i++) {
 
-            if (a[i] < 0){
-                output[negIndex]=a[i];
-                negIndex+=2;
+            if (a[i] < 0) {
+                output[negIndex] = a[i];
+                negIndex += 2;
 
-            }else {
-                output[posIndex]=a[i];
-                posIndex+=2;
+            } else {
+                output[posIndex] = a[i];
+                posIndex += 2;
 
             }
         }

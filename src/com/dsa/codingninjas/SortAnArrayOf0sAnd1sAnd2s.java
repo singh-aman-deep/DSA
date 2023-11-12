@@ -5,28 +5,26 @@ import java.util.Arrays;
 
 /**
  * 06 Nov 2023
- *
+ * <p>
  * Sort An Array of 0s, 1s and 2s
- *
- *Problem Statement: Given an array consisting of only 0s, 1s, and 2s. Write a program to in-place sort the array without using inbuilt sort functions. ( Expected: Single pass-O(N) and constant space)
- *
- *  Example:
- *
- *  Input: nums = [2,0,2,1,1,0]
+ * <p>
+ * Problem Statement: Given an array consisting of only 0s, 1s, and 2s. Write a program to in-place sort the array without using inbuilt sort functions. ( Expected: Single pass-O(N) and constant space)
+ * <p>
+ * Example:
+ * <p>
+ * Input: nums = [2,0,2,1,1,0]
  * Output: [0,0,1,1,2,2]
- *
+ * <p>
  * Input: nums = [2,0,1]
  * Output: [0,1,2]
- *
+ * <p>
  * Input: nums = [0]
  * Output: [0]
- *
- *
  */
 public class SortAnArrayOf0sAnd1sAnd2s {
     public static void main(String[] args) {
         int n = 6;
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(new Integer[] {0, 2, 1, 2, 0, 1}));
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(new Integer[]{0, 2, 1, 2, 0, 1}));
         sortArray(arr, n);
         System.out.println("After sorting:");
         for (int i = 0; i < n; i++) {

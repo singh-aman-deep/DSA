@@ -6,25 +6,23 @@ import java.util.List;
 
 /**
  * 11 Nov 2023
- *
+ * <p>
  * Next Greater Permutation
- *
+ * <p>
  * Problem Statement: Given an array Arr[] of integers, rearrange the numbers of the given array into the lexicographically next greater permutation of numbers.
- *
+ * <p>
  * If such an arrangement is not possible, it must rearrange to the lowest possible order (i.e., sorted in ascending order).
- *
+ * <p>
  * Example 1 :
- *
+ * <p>
  * Input format: Arr[] = {1,3,2}
  * Output: Arr[] = {2,1,3}
  * Explanation: All permutations of {1,2,3} are {{1,2,3} , {1,3,2}, {2,13} , {2,3,1} , {3,1,2} , {3,2,1}}. So, the next permutation just after {1,3,2} is {2,1,3}.
- *
- *
  */
 public class NextGreaterPermutation {
 
     public static void main(String args[]) {
-        List<Integer> A = Arrays.asList(new Integer[] {2, 1, 5, 4, 3, 0, 0});
+        List<Integer> A = Arrays.asList(new Integer[]{2, 1, 5, 4, 3, 0, 0});
         List<Integer> ans = nextGreaterPermutation(A);
 
         System.out.print("The next permutation is: [");
@@ -38,10 +36,10 @@ public class NextGreaterPermutation {
     /**
      * Time Complexity: O(3N), where N = size of the given array
      * Finding the break-point, finding the next greater element, and reversal at the end takes O(N) for each, where N is the number of elements in the input array. This sums up to 3*O(N) which is approximately O(3N).
-     *
+     * <p>
      * Space Complexity: Since no extra storage is required. Thus, its space complexity is O(1).
      */
-    public static List< Integer > nextGreaterPermutation(List< Integer > A) {
+    public static List<Integer> nextGreaterPermutation(List<Integer> A) {
         int n = A.size(); // size of the array.
 
         // Step 1: Find the break point:

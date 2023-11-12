@@ -28,7 +28,7 @@ public class CountOfSmallerElements {
     public static long countOfElements(long arr[], long n, long x) {
         long count = 0;
         for (long l : arr) {
-            if (l<=x){
+            if (l <= x) {
                 count++;
             }
         }

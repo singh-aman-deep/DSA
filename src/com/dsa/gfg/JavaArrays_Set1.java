@@ -25,17 +25,17 @@ public class JavaArrays_Set1 {
     public static void main(String[] args) {
         int a[] = {1, 2, 3, 4, 5};
         int n = a.length;
-        System.out.println(average(a,n));
+        System.out.println(average(a, n));
     }
 
     static String average(int A[], int N) {
         int sum = 0;
         float avg;
-        for (int i = 0; i < N; i++){
-            sum+=A[i];
+        for (int i = 0; i < N; i++) {
+            sum += A[i];
         }
-        avg = (float) (sum*1.0/N);
+        avg = (float) (sum * 1.0 / N);
 
-        return String.format("%.2f",avg);
+        return String.format("%.2f", avg);
     }
 }

@@ -2,15 +2,15 @@ package com.dsa.leetcode;
 
 /**
  * 08 Nov 2023
- *
+ * <p>
  * 53. Maximum Subarray
- *
+ * <p>
  * Given an integer array nums, find the
  * subarray
- *  with the largest sum, and return its sum.
- *
+ * with the largest sum, and return its sum.
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
  * Output: 6
  * Explanation: The subarray [4,-1,2,1] has the largest sum 6.
@@ -18,7 +18,7 @@ package com.dsa.leetcode;
 public class MaximumSubArray {
 
     public static void main(String[] args) {
-        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(nums));
 
     }
@@ -26,7 +26,8 @@ public class MaximumSubArray {
     public static int maxSubArray(int[] nums) {
         int maxi = Integer.MIN_VALUE; // maximum sum
         int sum = 0;
-        int n= nums.length;;
+        int n = nums.length;
+        ;
 
         for (int i = 0; i < n; i++) {
 
