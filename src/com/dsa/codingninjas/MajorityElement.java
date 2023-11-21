@@ -92,7 +92,7 @@ public class MajorityElement {
         int cnt = 0; // count
         int el = 0; // Element
 
-        //applying the algorithm:
+        //applying the algorithm:Boyer Moore’s Voting Algorithm
         for (int i = 0; i < n; i++) {
             if (cnt == 0) {
                 cnt = 1;
